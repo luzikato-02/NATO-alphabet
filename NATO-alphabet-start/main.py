@@ -27,8 +27,8 @@ pass_dict = {row.letter:row.code for (index, row) in data.iterrows()}
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 def coder():
+    word_input = input("Enter a word: ")
     try:
-        word_input = input("Enter a word: ")
         coded = [pass_dict[letter.upper()] for letter in word_input]
     except KeyError:
         print("Sorry, only letter in the alphabet please.")
